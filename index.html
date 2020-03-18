@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passoword Show-Hide Button</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="lock">
+      <i class="material-icons">lock</i>
+    </div>
+    <input type="password" placeholder="Entre com a senha" required>
+    <span class="show-hide">
+      <i id="v" class="material-icons">visibility</i>
+    </span>
+  </div>
+  <script>
+    const pass_field = document.querySelector('input');
+    const show_btn = document.getElementById('v');
+    show_btn.addEventListener("click", function(){
+      if(pass_field.type === "password"){
+        pass_field.type = "text";
+        show_btn.innerText = '';
+        show_btn.classList.add("hide");
+      }else{
+        pass_field.type = "password";
+        show_btn.classList.remove("hide");
+        show_btn.innerText = 'visibility';
+      }
+    })
+  </script>
+</body>
+</html>
