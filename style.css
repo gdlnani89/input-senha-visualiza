@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Roboto+Slab&display=swap');
 *
 {
   margin: 0;
@@ -11,15 +12,32 @@ body
   align-items: center;
   justify-content: center;
   text-align: center;
+  background: #b4f0fd;
+  font-family: 'Roboto Slab', serif;
+
 }
 .content
 {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+}
+.content h2
+{
+  margin-bottom: 15px;
+}
+.inp 
+{
+  display: flex;
   height: 50px;
   width: 280px;
-  display: flex;
+  margin-bottom: 20px;
   position: relative;
 }
-.content .lock
+.inp .lock, .inp .user
 {
   position: absolute;
   height: 50px;
@@ -31,8 +49,8 @@ body
   border-radius: 3px 0 0 3px;
   border: 1px solid #48DBFB;
 }
-.content input
-{
+.inp input
+{ 
   height: 100%;
   width: 100%;
   border-radius: 3px;
@@ -45,9 +63,9 @@ body
 }
 input:focus
 {
-  box-shadow: 0 0 15px #82e6fc,
-              0 0 25px #b4f0fd,
-              0 0 35px #ffffff;
+  box-shadow: 0 0 5px #82e6fc,
+              0 0 10px #b4f0fd,
+              0 0 20px #ffffff;
 }
 input::placeholder{
   color: #a6a6a6;
@@ -72,4 +90,28 @@ input::placeholder{
 }
 input:valid ~ .show-hide i{
   display: block;
+}
+.content button
+{
+  padding: 12px;
+  color: white;
+  background: #37d7fb;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.content button:hover
+{
+  box-shadow: 0 0 5px #82e6fc,
+  0 0 10px #b4f0fd,
+  0 0 20px #ffffff;
+}
+
+.content a
+{
+  margin-top: 10px;
+  font-size: 10px;
 }

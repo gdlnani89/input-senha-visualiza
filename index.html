@@ -9,16 +9,27 @@
 </head>
 <body>
   <div class="content">
-    <div class="lock">
-      <i class="material-icons">lock</i>
+    <h2>Faça seu login</h2>
+    <div class="inp">
+      <div class="user">
+        <i class="material-icons">account_circle</i>
+      </div>
+      <input type="text" placeholder="Entre com o seu login" required>
     </div>
-    <input type="password" placeholder="Entre com a senha" required>
-    <span class="show-hide">
-      <i id="v" class="material-icons">visibility</i>
-    </span>
+    <div class="inp">
+      <div class="lock">
+        <i class="material-icons">lock</i>
+      </div>
+      <input id="p" type="password" placeholder="Entre com a senha" required>
+      <span class="show-hide">
+        <i id="v" class="material-icons">visibility</i>
+      </span>
+    </div>
+    <button>Entrar</button>
+    <a href="">Esqueci minha senha</a>
   </div>
   <script>
-    const pass_field = document.querySelector('input');
+    const pass_field = document.getElementById('p');
     const show_btn = document.getElementById('v');
     show_btn.addEventListener("click", function(){
       if(pass_field.type === "password"){
